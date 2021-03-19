@@ -18,13 +18,15 @@ const BreedForm = (props: IProps) => {
 
   const isLoading = get(props, 'isLoading', false);
 
+  // rules={[validator.require]}
+
   return (
     <Form onFinish={props.onFinish} initialValues={props.initialValues} layout="vertical">
-      <Form.Item name="name" label="Breed name" rules={[validator.require]}>
+      <Form.Item name="name" label="Breed name" >
         <Input  />
       </Form.Item>
 
-      <Form.Item name="pet"  label="Pet" rules={[validator.require]}>
+      <Form.Item name="pet"  label="Pet" >
         <Select>
           {props.petList.map((el) => (
             <Option key={el._id} value={el._id}>
@@ -34,11 +36,11 @@ const BreedForm = (props: IProps) => {
         </Select>
       </Form.Item>
 
-      <Form.Item name="color" label="Color" rules={[validator.require]}>
+      <Form.Item name="color" label="Color" >
         <Input  />
       </Form.Item>
 
-      <Form.Item name="gender" label="Gender" rules={[validator.require]}>
+      <Form.Item name="gender" label="Gender">
         <Input  />
       </Form.Item>
 

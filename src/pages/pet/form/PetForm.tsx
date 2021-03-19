@@ -18,9 +18,10 @@ interface IProps {
 }
 
 const PetForm = (props: IProps) => {
-  //  const { Option } = Select;
+   const { Option } = Select;
 
   const isLoading = get(props, 'isLoading', false);
+
 
   return (
     <Form onFinish={props.onFinish} initialValues={props.initialValues} layout="vertical">
